@@ -2,7 +2,7 @@
 <html>
   <head>
     <title>Chatbot</title>
-  </head>
+  </head> 
   <body>
     <div class="js-container"></div>
 
@@ -46,7 +46,7 @@
         }
 
         return (
-          <>
+          <> //Fragment which reduces space taken by div.
             <input
               placeholder="Send a message to Chatbot"
               size="30"
@@ -60,8 +60,9 @@
         );
       }
 
-      function ChatMessage({ message, sender }) {
-        // const message = props.message;
+       function ChatMessage({ message, sender }) { //Destructuring
+        // const message = props.message; //props is an object helps in reusablity of input
+
         // const sender = props.sender;
         // const { message, sender } = props;
 
@@ -70,7 +71,7 @@
           return (
             <div>
               <img src="robot.png" width="50" />
-              {message}
+              {message} //insertion is done by {variable_name}
             </div>
           );
         }
@@ -78,7 +79,7 @@
 
         return (
           <div>
-            {sender === 'robot' && (
+            {sender === 'robot' && (  //&& guard operator
               <img src="robot.png" width="50" />
             )}
             {message}
